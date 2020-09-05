@@ -1,5 +1,7 @@
-# ***🚀 GraphQL 서버 환경설정***
+# **🚀 GraphQL 서버 환경설정**
 
+<br>
+<br>
 <br>
 
 # 🏷 프로젝트 생성
@@ -46,8 +48,7 @@ npm install -D @babel/node @babel/core @babel/preset-env
 ```json
 ...
 "scripts": {
-    "prod": "NODE_ENV=production nodemon src/index.js --exec babel-node",
-    "dev": "NODE_ENV=development nodemon src/index.js --exec babel-node"
+    "dev": "nodemon src/index.js --exec babel-node"
 },
 ...
 ```
@@ -201,7 +202,13 @@ npm install dotenv
 
 <br>
 
-## (2) src/env.js 생성
+## (2) .env.development, .env.production
+
+- 프로젝트 루트에 .env.development, .env.production 파일 생성
+
+<br>
+
+## (3) src/env.js 생성
 
 ```jsx
 import dotenv from "dotenv";
@@ -348,6 +355,8 @@ docker-compose up -d
 
 ```bash
 npm install -D @prisma/cli
+
+npm install @prisma/client
 ```
 
 <br>
