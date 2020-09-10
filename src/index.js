@@ -1,10 +1,12 @@
 import "./env";
+import "./passport";
 
 import { GraphQLServer } from "graphql-yoga";
 import NoIntrospection from "graphql-disable-introspection";
 import morgan from "morgan";
 import schema from "./schema";
 import context from "./context";
+import { authenticateJwt } from "./passport";
 
 const port = process.env.PORT || 4000;
 
@@ -14,6 +16,7 @@ const server = new GraphQLServer({
 });
 
 server.express.use(morgan("dev"));
+server.express.use(authenticateJwt);
 
 server.start(
   {

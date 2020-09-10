@@ -23,11 +23,15 @@
   },
   "dependencies": {
     "@prisma/client": "^2.5.1",
+    "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
     "graphql-disable-introspection": "^1.1.0",
     "graphql-tools": "^6.1.0",
     "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
     "merge-graphql-schemas": "^1.7.8",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
   }
 }

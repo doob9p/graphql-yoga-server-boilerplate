@@ -1,6 +1,16 @@
+enum LoginType {
+    EMAIL
+    KAKAO
+}
+
 type User {
     id: ID!
+    email: String
+    password: String
+    salt: String
     name: String!
+    refreshToken: String
+    type: LoginType!
     createdAt: String!
     updatedAt: String!
 }

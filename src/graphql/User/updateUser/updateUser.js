@@ -2,14 +2,15 @@ import prisma from "../../../prisma";
 
 export default {
   Mutation: {
-    createUser: async (_, args) => {
+    updateUser: async (_, args) => {
       const { name } = args;
 
       try {
-        const user = await prisma.user.create({
-          data: {
-            name,
+        const user = await prisma.user.update({
+          where: {
+            id: "",
           },
+          data: { name },
           select: {
             id: true,
             name: true,
@@ -20,9 +21,7 @@ export default {
 
         return user;
       } catch (e) {
-        await prisma.$disconnect();
-
-        throw Error(e);
+        console.log(e);
       }
     },
   },

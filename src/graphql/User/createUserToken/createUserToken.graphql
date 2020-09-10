@@ -1,0 +1,9 @@
+type createUserTokenResponse {
+  isSuccess: Boolean!
+  token: String!
+  message: String!
+}
+
+type Query {
+  createUserToken(email: String!, password: String!): createUserTokenResponse!
+}

@@ -1,0 +1,27 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateEnum",
+      "enum": "LoginType",
+      "values": [
+        "EMAIL",
+        "KAKAO"
+      ]
+    },
+    {
+      "tag": "CreateField",
+      "model": "User",
+      "field": "refreshToken",
+      "type": "String",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "User",
+      "field": "type",
+      "type": "LoginType",
+      "arity": "Required"
+    }
+  ]
+}
