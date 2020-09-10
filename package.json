@@ -9,7 +9,11 @@
     "preprod": "npx prisma generate",
     "prod": "NODE_ENV=production nodemon src/index.js --exec babel-node",
     "predev": "npx prisma generate",
-    "dev": "NODE_ENV=development nodemon src/index.js --exec babel-node"
+    "dev": "NODE_ENV=development nodemon src/index.js --exec babel-node",
+    "predevstart": "npx prisma generate",
+    "devstart": "pm2 start ecosystem.config.js --env development",
+    "preprodstart": "npx prisma generate",
+    "prodstart": "pm2 start ecosystem.config.js --env production"
   },
   "keywords": [],
   "author": "",
