@@ -15,7 +15,7 @@ enum LoginType {
   KAKAO
 }
 
-model User{
+model User {
   id           String    @default(cuid()) @id
   email        String?   @unique
   password     String?
@@ -25,4 +25,11 @@ model User{
   type         LoginType
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @default(now()) @updatedAt
+}
+
+model Post {
+  id        String   @default(cuid()) @id
+  contents  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
 }
