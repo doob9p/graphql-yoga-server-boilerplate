@@ -1,16 +1,23 @@
 enum LoginType {
-    EMAIL
-    KAKAO
+  EMAIL
+  KAKAO
 }
 
 type User {
-    id: ID!
-    email: String
-    password: String
-    salt: String
-    name: String!
-    refreshToken: String
-    type: LoginType!
-    createdAt: String!
-    updatedAt: String!
+  id: ID!
+  email: String
+  password: String
+  salt: String
+  name: String!
+  refreshToken: String
+  type: LoginType!
+  createdAt: String!
+  updatedAt: String!
+}
+
+type Post {
+  id: ID!
+  contents: String!
+  createdAt: String!
+  updatedAt: String!
 }
