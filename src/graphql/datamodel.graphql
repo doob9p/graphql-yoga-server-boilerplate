@@ -21,3 +21,10 @@ type Post {
   createdAt: String!
   updatedAt: String!
 }
+
+type List {
+  id: ID!
+  contents: String!
+  createdAt: String!
+  updatedAt: String!
+}
