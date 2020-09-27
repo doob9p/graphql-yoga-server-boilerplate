@@ -6,10 +6,10 @@ export default {
       const { contents } = args;
 
       try {
-        const post=await prisma.post.create({data: {contents}});
+        const post = await prisma.post.create({ data: { contents } });
 
         return post;
-      }catch(e) {
+      } catch (e) {
         await prisma.$disconnect();
 
         throw Error(e);

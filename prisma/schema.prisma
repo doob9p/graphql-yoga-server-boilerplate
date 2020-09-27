@@ -33,3 +33,10 @@ model Post {
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now()) @updatedAt
 }
+
+model List {
+  id        String   @default(cuid()) @id
+  contents  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
